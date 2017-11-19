@@ -1,0 +1,8 @@
+@font-face {
+  font-family: "BloggerSans";
+  src: url("../fonts/BloggerSans.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/BloggerSans.eot?#iefix") format("embedded-opentype"), url("../fonts/BloggerSans.otf") format("opentype"), url("../fonts/BloggerSans.svg") format("svg"), url("../fonts/BloggerSans.ttf") format("truetype"), url("../fonts/BloggerSans.woff") format("woff"), url("../fonts/BloggerSans.woff2") format("woff2");
+  /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal; }

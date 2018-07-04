@@ -1,13 +1,4 @@
 $(function(){
-    // $('.portfolio .list-portfolio li a').hover(
-    //     function(){
-    //         $(this).find('.portfolio-details').addClass('active');
-    //     },
-    //     function(){
-    //         $(this).find('.portfolio-details').removeClass('active');
-    //     }
-    // );
-
     $('#aboutNav').on('click', (e) => {
         e.preventDefault();
         $('body, html').animate({

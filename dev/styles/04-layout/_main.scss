@@ -1,10 +1,229 @@
 header {
-    position: absolute;
+    background: $color--main;
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    align-items: center;
+    flex: 1;
+    padding: 0 2em;
+    z-index: 20;
+
+    h1 {
+        color: rgba(255,255,255,.7);
+        font-weight: 700;
+        text-transform: uppercase;
+        font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+        font-size: 1.25rem;
+        width: 40%;
+    }
+}
+
+nav {
+    width: 60%;
+
+    ul {
+        text-align: right;
+    }
+    li {
+        display: inline-block;
+    }
+
+    a {
+        color: rgba(255,255,255,.7);
+        padding: .5rem 1rem;
+        font-size: .9rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+
+        &:hover {
+            color: rgb(255,255,255);
+            text-decoration: none;
+        }
+    }
 }
 
 .about {
-    background: url(../img/hero-img.jpg) no-repeat;
-    background-position: center center;
+    background: #49423f url(../img/hero-img.png) no-repeat;
+    background-position: left center;
     height: 100vh;
     width: 100%;
+    padding-top: 70px;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    h2 {
+        font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+        font-size: 3rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #fff;
+        margin-bottom: 20px;
+    }
+
+    p {
+        color: #fff;
+        font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+        font-size: 1.2rem;
+    }
+}
+
+.portfolio {
+    padding: 3em 0;
+    text-align: center;
+
+    h2 {
+        font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+        font-size: 2rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: $color--red;
+        margin-bottom: 1em;
+    }
+
+    .list-portfolio {
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+
+        li {
+            flex-basis: 50%;
+            height: 250px;
+            position: relative;
+            overflow: hidden;
+
+            a {
+                position: absolute;
+                display: block;
+                width: 100%;
+                height: 100%;
+                display: -webkit-flex;
+                display: -ms-flex;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .portfolio-details {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: rgba(240,95,64,.9);
+                align-items: center;
+                justify-content: center;
+                color: #fff;
+                display: -webkit-flex;
+                display: -ms-flex;
+                display: flex;
+                top: 100%;
+            }
+
+            /* Safari 4.0 - 8.0 */
+            @-webkit-keyframes example {
+                from {top: 100%;}
+                to {top: 0;}
+            }
+
+            /* Standard syntax */
+            @keyframes example {
+                from {top: 100%;}
+                to {top: 0;}
+            }
+
+            &:hover {
+                .portfolio-details {
+                    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+                   -webkit-animation-duration: 0.4s; /* Safari 4.0 - 8.0 */
+                   animation-name: example;
+                   animation-duration: 0.4s;
+                   top: 0;
+                }
+            }
+
+        }
+
+        .darlie {
+            background: #44974a;
+        }
+
+        .plus100 {
+            background: #015ea3;
+        }
+
+        .brunchwork {
+            background: #ffad18;
+        }
+
+        .fernleaf {
+            background: #0e703e;
+        }
+
+        .toyota {
+            background: #ddd;
+        }
+
+        .cottonon {
+            background: #efd8b6;
+        }
+
+        p {
+            font-size: 1.2rem;
+        }
+    }
+}
+
+.contact {
+    padding: 3em 0;
+    text-align: center;
+
+    h2 {
+        font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+        font-size: 2rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: $color--red;
+    }
+
+    .contact-wrapper {
+        padding-top: 30px;
+    }
+
+    p {
+        margin-bottom: 10px;
+    }
+
+    a {
+        color: #333;
+
+        &:hover {
+            color: $color--red;
+            text-decoration: none;
+        }
+    }
+
+    .fas,
+    .fab {
+        color: $color--red;
+        font-size: 2rem;
+    }
+}
+
+.footer{
+    background: $color--main;
+    padding: 20px 0;
+    color: #999;
+    font-size: 0.7rem;
+    text-align: center;
+
+    span {
+        color: #fff;
+    }
 }

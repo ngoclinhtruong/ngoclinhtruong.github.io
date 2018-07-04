@@ -1,10 +1,10 @@
-$color--main: #06f;
-$color--border: lighten($color--main, 20%);
+$color--main: #49423f;
+$color--red: #e0674b;
+
+* {
+    box-sizing: border-box;
+}
 
 body {
-
-
-   p {
-      
-   }
+    color: #333;
 }

@@ -109,7 +109,7 @@ gulp.task(`compileCSSForDev`, function () {
         .pipe(browserSpecificPrefixer({
             browsers: [`last 2 versions`]
         }))
-        .pipe(gulp.dest(`temp/styles`));
+        .pipe(gulp.dest(`styles`));
 });
 
 /**
@@ -144,7 +144,12 @@ gulp.task(`compileCSSForProd`, function () {
 gulp.task(`transpileJSForDev`, function () {
     return gulp.src(`dev/scripts/*.js`)
         .pipe(babel())
-        .pipe(gulp.dest(`temp/scripts`));
+        .pipe(gulp.dest(`scripts`));
+});
+
+gulp.task(`transpileImgForDev`, function () {
+    return gulp.src(`dev/img/**/*`)
+        .pipe(gulp.dest(`img`));
 });
 
 /**
@@ -274,7 +279,7 @@ gulp.task(`build`, [
  *
  * Finally, changes to images also trigger a browser reload.
  */
-gulp.task(`serve`, [`compileCSSForDev`, `lintJS`, `transpileJSForDev`, `validateHTML`], function () {
+gulp.task(`serve`, [`compileCSSForDev`, `lintJS`, `transpileJSForDev`, `transpileImgForDev`, `validateHTML`], function () {
     browserSync({
         notify: true,
         port: 9000,
@@ -311,7 +316,7 @@ gulp.task(`serve`, [`compileCSSForDev`, `lintJS`, `transpileJSForDev`, `validate
 gulp.task(`clean`, function () {
     let fs = require(`fs`),
         i,
-        expendableFolders = [`temp`, `prod`];
+        expendableFolders = [`prod`];
 
     for (i = 0; i < expendableFolders.length; i += 1) {
         try {

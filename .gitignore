@@ -1,2 +1,4 @@
 # Ignore the `node_modules` folder created by `npm install`.
 /node_modules
+
+/temp
